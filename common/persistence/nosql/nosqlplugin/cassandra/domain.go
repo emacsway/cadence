@@ -354,7 +354,7 @@ func (db *cdb) SelectDomain(ctx context.Context, domainID *string, domainName *s
 	)
 
 	if err != nil {
-		return nil, nil
+		return nil, err
 	}
 
 	config.BadBinaries = p.NewDataBlob(badBinariesData, common.EncodingType(badBinariesDataEncoding))
